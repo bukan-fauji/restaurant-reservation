@@ -1,7 +1,7 @@
 import os
 
 DB_CONFIG = {
-    'host': os.getenv('DB_HOST', 'mysql://root:noeiMupVeGBGiMXowKzPfQMElrrvTDWK@monorail.proxy.rlwy.net:28653/railway'),
+    'host': os.getenv('DB_HOST', 'mysql-production-4178.up.railway.app'),
     'user': os.getenv('DB_USER', 'root'),
     'password': os.getenv('DB_PASSWORD', 'noeiMupVeGBGiMXowKzPfQMElrrvTDWK'),
     'database': os.getenv('DB_NAME', 'railway')
