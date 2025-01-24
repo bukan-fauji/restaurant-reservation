@@ -4,7 +4,7 @@ from models.db import connect_db
 
 menu_bp = Blueprint('menu_bp', __name__)
 
-# Ambil semua menu
+
 @menu_bp.route('/', methods=['GET'])
 def get_menus():
     """
@@ -44,7 +44,7 @@ def get_menus():
     
     return jsonify({'menus': menus}), 200
 
-# Tambah menu (hanya admin)
+
 @menu_bp.route('/', methods=['POST'])
 @jwt_required()
 def add_menu():
@@ -97,7 +97,7 @@ def add_menu():
 
     return jsonify({'message': 'Menu berhasil ditambahkan!'}), 201
 
-# Edit menu (hanya admin)
+
 @menu_bp.route('/<int:menu_id>', methods=['PUT'])
 @jwt_required()
 def update_menu(menu_id):
@@ -154,7 +154,7 @@ def update_menu(menu_id):
 
     return jsonify({'message': 'Menu berhasil diperbarui!'}), 200
 
-# Hapus menu (hanya admin)
+
 @menu_bp.route('/<int:menu_id>', methods=['DELETE'])
 @jwt_required()
 def delete_menu(menu_id):
