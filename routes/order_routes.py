@@ -4,7 +4,7 @@ from models.db import connect_db
 
 order_bp = Blueprint('order_bp', __name__)
 
-# Buat pesanan makanan berdasarkan reservasi
+
 @order_bp.route('/', methods=['POST'])
 @jwt_required()
 def create_order():
@@ -58,7 +58,7 @@ def create_order():
 
     return jsonify({'message': 'Pesanan berhasil dibuat!'}), 201
 
-# Lihat semua pesanan dari reservasi tertentu
+
 @order_bp.route('/<int:reservation_id>', methods=['GET'])
 @jwt_required()
 def get_orders(reservation_id):
@@ -109,7 +109,7 @@ def get_orders(reservation_id):
 
     return jsonify({'orders': orders}), 200
 
-# Hapus pesanan
+
 @order_bp.route('/<int:order_id>', methods=['DELETE'])
 @jwt_required()
 def delete_order(order_id):
