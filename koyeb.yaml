@@ -5,15 +5,15 @@ services:
     build_command: pip install -r requirements.txt
     start_command: gunicorn app:app
     ports:
-      - 5000
+      - 000
     env:
       - key: FLASK_ENV
         value: production
       - key: DB_HOST
-        value: mysql-instance.railway.app
+        value: mysql-production-4178.up.railway.app
       - key: DB_USER
-        value: railway
+        value: root
       - key: DB_PASSWORD
-        value: your_password
+        value: noeiMupVeGBGiMXowKzPfQMElrrvTDWK
       - key: DB_NAME
         value: railway
