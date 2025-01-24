@@ -5,7 +5,7 @@ services:
     build_command: pip install -r requirements.txt
     start_command: gunicorn app:app
     ports:
-      - 000
+      - 5000
     env:
       - key: FLASK_ENV
         value: production
